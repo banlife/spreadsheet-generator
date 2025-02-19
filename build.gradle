@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
 group = 'org.example'
@@ -9,12 +10,12 @@ repositories {
     mavenCentral()
 }
 
+java {
+    sourceCompatibility = '17'
+}
+
 dependencies {
     implementation 'org.apache.poi:poi-ooxml:4.1.2'
     implementation 'org.apache.poi:poi:4.1.2'
     implementation 'jakarta.servlet:jakarta.servlet-api:6.0.0'
-}
-
-test {
-    useJUnitPlatform()
 }
